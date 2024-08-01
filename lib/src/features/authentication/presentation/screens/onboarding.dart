@@ -50,8 +50,8 @@ class _OnboardScreenState extends State<OnboardScreen> {
               SizedBox(height: height * 30),
               ElevatedButton(
                 style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(Pellet.kWhite),
-                  foregroundColor: MaterialStateProperty.all(Colors.blueAccent),
+                  backgroundColor: WidgetStateProperty.all(Pellet.kWhite),
+                  foregroundColor: WidgetStateProperty.all(Colors.blueAccent),
                 ),
                 onPressed: () {
                   Navigator.pushNamed(context, '/access');

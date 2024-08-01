@@ -90,11 +90,18 @@ class _DmsViewState extends State<DmsView> {
               ),
               SizedBox(height: _height * 2),
               CustomRefreshIndicator(
-                builder: MaterialIndicatorDelegate(
-                  builder: (context, controller) {
-                    return Lottie.asset(Assets.progressIndicator);
-                  },
-                ),
+                builder: (
+                  BuildContext context,
+                  Widget child,
+                  IndicatorController controller,
+                ) {
+                  return child;
+                },
+                // builder: MaterialIndicatorDelegate(
+                //   builder: (context, controller) {
+                //     return Lottie.asset(Assets.progressIndicator);
+                //   },
+                // ),
                 onRefresh: () async {
                   context.read<ChatsBloc>().add(LoadChats());
                 },

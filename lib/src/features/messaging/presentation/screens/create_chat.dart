@@ -91,7 +91,7 @@ class _CreateChatsState extends State<CreateDM> {
                                       trailing: Radio(
                                         value: users[index].id,
                                         groupValue: selectedUser,
-                                        fillColor: MaterialStateProperty.all(
+                                        fillColor: WidgetStateProperty.all(
                                             Pellet.kSecondary),
                                         onChanged: (value) {
                                           setState(() {

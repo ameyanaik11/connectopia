@@ -86,12 +86,12 @@ class AccessScreen extends StatelessWidget {
               SizedBox(height: _height * 3),
               ElevatedButton(
                 style: ButtonStyle(
-                  side: MaterialStateProperty.resolveWith<BorderSide>(
-                      (Set<MaterialState> states) {
+                  side: WidgetStateProperty.resolveWith<BorderSide>(
+                      (Set<WidgetState> states) {
                     return const BorderSide(color: Colors.grey);
                   }),
                   backgroundColor:
-                      const MaterialStatePropertyAll(Colors.transparent),
+                      const WidgetStatePropertyAll(Colors.transparent),
                 ),
                 onPressed: () {
                   Navigator.pushNamed(context, '/signup');

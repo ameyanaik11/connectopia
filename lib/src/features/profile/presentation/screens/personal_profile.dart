@@ -226,11 +226,18 @@ class _PersonalProfileScreenState extends State<PersonalProfileScreen>
                   ),
                 ],
               ),
-              builder: MaterialIndicatorDelegate(
-                builder: (context, controller) {
-                  return Lottie.asset(Assets.progressIndicator);
-                },
-              ),
+              // builder: MaterialIndicatorDelegate(
+              //   builder: (context, controller) {
+              //     return Lottie.asset(Assets.progressIndicator);
+              //   },
+              // ),
+              builder: (
+                BuildContext context,
+                Widget child,
+                IndicatorController controller,
+              ) {
+                return child;
+              },
             ),
           ),
         );
